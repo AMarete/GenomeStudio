@@ -8,4 +8,4 @@ basic usage:
     ./report2plink -f [FinalReport.txt or .gz] -s [SNPMap.txt or .gz] -o [prefix]
 
 
-[<b>Example implementation script</b>](https://raw.githubusercontent.com/AMarete/fimpute-utils/master/test_data/Example.sh)
+![ ](https://github.com/AMarete/fimpute-utils/blob/master/test_data/genotype_R2.png?raw=true)
