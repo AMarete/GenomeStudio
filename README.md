@@ -7,5 +7,6 @@ basic usage:
     
     ./report2plink -f [FinalReport.txt or .gz] -s [SNPMap.txt or .gz] -o [prefix]
 
+sample output:
 
 ![ ](https://github.com/AMarete/GenomeStudio/blob/main/data/Screen%20Shot%202020-10-14%20at%2010.28.03%20AM.png?raw=true)
