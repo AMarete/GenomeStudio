@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import timeit
-from fxns import error
+from fxns import error, open_by_suffix
 from parser_handler import ArgumentParser
 
 start = timeit.default_timer()
@@ -17,8 +17,8 @@ parser.add_argument("-m", "--marker", help="GenomeStudio SNP file", action="stor
 parser.add_argument("-p", "--prefix", help="Output prefix", action="store", metavar="\b")
 args = parser.parse_args()
 
-final_report = open(args.report)
-marker_file = open(args.marker)
+final_report = open_by_suffix(args.report)
+marker_file = open_by_suffix(args.marker)
 file_out = args.prefix
 
 outped = open(file_out + '.ped', 'w')
