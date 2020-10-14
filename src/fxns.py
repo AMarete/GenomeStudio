@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
+import gzip
+import io
 from platform import python_version
 
 
@@ -22,3 +23,12 @@ def msg():
     basic usage : 
     ./report2plink -f [FinalReport.txt] -s [SNPMap.txt] -o [prefix]
     '''
+
+
+# Function to read various index formats
+def open_by_suffix(filename):
+    """io allows to return with universal new lines 'U'"""
+    if filename.endswith('.gz'):
+        return io.TextIOWrapper(io.BufferedReader(gzip.open(filename)))
+    else:
+        return open(filename)
