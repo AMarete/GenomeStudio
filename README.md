@@ -5,7 +5,10 @@ is written in Python 3.5, distributed 'as is' and can probably work on Linux-lik
 
 basic usage:  
     
-    ./report2plink -f [FinalReport.txt or .gz] -s [SNPMap.txt or .gz] -o [prefix]
+  ```python
+  ./report2plink -f [FinalReport.txt or .gz] -s [SNPMap.txt or .gz] -o [prefix]
+  ```
+
 
 sample output:
 
