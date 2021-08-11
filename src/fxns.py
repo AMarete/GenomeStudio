@@ -11,7 +11,7 @@ def error(message):
 
 
 def py_version():
-    if not float(python_version()[0:3]) >= 3.5:
+    if float(python_version()[0:3]) < 3.5:
         return error("Python version not satisfied, install Python V3.5 or later\n")
 
 

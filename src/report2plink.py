@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 import timeit
 from fxns import error, open_by_suffix
 from parser_handler import ArgumentParser
@@ -54,9 +52,8 @@ for en, a in enumerate(final_report):
         snp_count += 1
         if len(name) == 1:
             snp_name.append(snp)
-        else:
-            if snp != snp_name[snp_count]:
-                error(f'''SNP order inconsistent. Check {snp} and {snp_name[snp_count]}
+        elif snp != snp_name[snp_count]:
+            error(f'''SNP order inconsistent. Check {snp} and {snp_name[snp_count]}
        try sort by sample ID then SNP Name''')
     else:
         snp_count = 0

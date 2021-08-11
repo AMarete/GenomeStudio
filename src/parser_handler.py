@@ -14,11 +14,11 @@ class ArgumentParser(argparse.ArgumentParser):
         if name is None:
             return None
         for action in container:
-            if '/'.join(action.option_strings) == name:
-                return action
-            elif action.metavar == name:
-                return action
-            elif action.dest == name:
+            if (
+                '/'.join(action.option_strings) == name
+                or action.metavar == name
+                or action.dest == name
+            ):
                 return action
 
     def error(self, message):
