@@ -41,7 +41,7 @@ def msg():
     This version supports conversion of Forward/Reverse strand i.e. `Allele1 - Forward` and  `Allele2 - Forward`
 
     basic usage : 
-    report2plink -f [FinalReport.txt] -s [SNPMap.txt] -o [prefix]
+    report2plink -r [FinalReport.txt] -m [SNPMap.txt] -p [prefix]
     '''
 
 
