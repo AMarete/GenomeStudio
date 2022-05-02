@@ -5,8 +5,28 @@ import io
 from platform import python_version
 
 
+class MyCols:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
+    def disable(self):
+        self.HEADER = ''
+        self.OKBLUE = ''
+        self.OKGREEN = ''
+        self.WARNING = ''
+        self.FAIL = ''
+        self.ENDC = ''
+
+
 def error(message):
-    print("ERROR: " + message)
+    print(f"{MyCols.FAIL}Error:\t{message}{MyCols.ENDC}")
     raise SystemExit
 
 
@@ -17,11 +37,11 @@ def py_version():
 
 def msg():
     return '''Andrew Marete (C) 2016
-    This function converts an Illumina GenomeStudio Report to Plink Ped/Map format
+    This program converts an Illumina GenomeStudio Report to Plink Ped/Map format
     This version supports conversion of Forward/Reverse strand i.e. `Allele1 - Forward` and  `Allele2 - Forward`
 
     basic usage : 
-    ./report2plink -f [FinalReport.txt] -s [SNPMap.txt] -o [prefix]
+    report2plink -f [FinalReport.txt] -s [SNPMap.txt] -o [prefix]
     '''
 
 

@@ -28,7 +28,7 @@ def main():
         z = list(x.symmetric_difference(y))
         if z:
             error(f'''Missing required argument: {z}
-       try `./report2plink -h` for complete arguments list\n''')
+       try `report2plink -h` for complete arguments list\n''')
 
         import report2plink
         report2plink
@@ -37,7 +37,7 @@ def main():
 
     else:
         error(f'''Unknown argument(s)
-      try ./report2plink -h''')
+      try report2plink -h''')
 
 
 if __name__ == "__main__":

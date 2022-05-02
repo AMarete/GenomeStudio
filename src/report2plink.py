@@ -5,7 +5,7 @@ from parser_handler import ArgumentParser
 start = timeit.default_timer()
 print("""
 Andrew Marete (C) 2016
-This function converts an Illumina GenomeStudio Report to Plink Ped/Map format
+This program converts an Illumina GenomeStudio Report to Plink Ped/Map format
 This version supports conversion of Forward/Reverse strand i.e. `Allele1 - Forward` and  `Allele2 - Forward`
 """)
 
